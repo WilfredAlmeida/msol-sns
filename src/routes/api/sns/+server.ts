@@ -39,6 +39,18 @@ export async function POST({ request }) {
 
     // TODO: add public key validation
 
+    const snsExists = await snsDb.exists(`${sns}`)
+    if(snsExists && snsExists > 0){
+        return json({
+            status: MsolStatusCodes.MSOL_SNS_EXISTS,
+            data: null,
+            error: null
+        },
+        {
+            status: HttpResponseCode.BAD_REQUEST
+        })
+    }
+
     const res = await snsDb.set(`${sns}`, `${publicKey}`)
 
     if (!res) {
