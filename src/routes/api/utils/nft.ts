@@ -1,4 +1,8 @@
+import { getRandomImageUrl } from "./image";
+
 export const mintNft = async (address: string, authToken: string) => {
+
+    const imageUrl = await getRandomImageUrl();
 
     const myHeaders = new Headers();
     myHeaders.append("accept", "application/json");
@@ -8,7 +12,8 @@ export const mintNft = async (address: string, authToken: string) => {
     const raw = JSON.stringify({
         "attributes": {
             "sns": "wilfred-dev",
-            "publicKey": address
+            "publicKey": address,
+            "created": Date.now()
         },
         "upsert": false,
         "name": "MSOL SNS",
@@ -16,7 +21,7 @@ export const mintNft = async (address: string, authToken: string) => {
         "description": address,
         "receiverAddress": address,
         "delegated": false,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/RedCat_8727.jpg/1200px-RedCat_8727.jpg"
+        "image": imageUrl
     });
 
 
