@@ -100,8 +100,6 @@ export async function GET({ url }) {
     }
 
     const res = await snsDb.get(sns)
-    console.log(res);
-
 
     if (!res) {
         return json(
@@ -118,7 +116,7 @@ export async function GET({ url }) {
 
     return json(
         {
-            status: MsolStatusCodes.MSOL_INPUT_INVALID,
+            status: MsolStatusCodes.MSOL_SNS_FOUND,
             data: [{ publicKey: res, sns }],
             error: null
         },
