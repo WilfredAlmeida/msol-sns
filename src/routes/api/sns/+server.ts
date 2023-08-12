@@ -24,12 +24,12 @@ export async function POST({ request }) {
         );
     }
 
-    if ((`${sns}`).trim().length > 20) {
+    if (!sns || !/^[A-Za-z0-9\-]{3,20}$/.test(`${sns}`)) {
         return json(
             {
                 status: MsolStatusCodes.MSOL_INPUT_INVALID,
                 data: null,
-                error: [{ message: 'Invalid sns. sns cannot be more than 20 characters.' }]
+                error: [{ message: 'Invalid sns. sns must 3 to 20 characters and only contain letters, numbers, and hyphens' }]
             },
             {
                 status: HttpResponseCode.BAD_REQUEST

@@ -1,5 +1,3 @@
-import { error } from '@sveltejs/kit';
-
 export const load = async ({ fetch, params }) => {
 
 	const snsArr = params.sns.split('/');
