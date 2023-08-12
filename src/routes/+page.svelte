@@ -64,6 +64,14 @@
 	};
 </script>
 
+<div class="flex items-center justify-center m-10">
+	<div class="text-white text-3xl text-center">
+	  <h2>Create Short Name (SNS) for your Solana Public Key</h2>
+	  <h3 class="text-green-400">Get an NFT for the SNS You Create</h3>
+	</div>
+  </div>
+  
+
 <div class="mx-auto max-w-500 mt-20 w-full flex justify-center items-center">
 	<div class="bg-gray-800 glassmorphic-6 shadow-lg rounded-lg p-8">
 		<form on:submit|preventDefault={formSubmit}>
@@ -114,7 +122,9 @@
 	<div class="mx-auto max-w-500 mt-20 w-full flex justify-center items-center">
 		<div class="bg-gray-800 glassmorphic-6 shadow-lg rounded-lg p-8">
 			<div class="flex justify-center">
+				<div class="text-white text-3xl text-center">
 				<h3 class="text-white text-3xl font-bold">SNS Created Successfully</h3>
+				</div>
 			</div>
 			<div class="flex justify-center mt-5">
 				<a target="_blank" href={snsString} class="text-green-400 text-2xl font-bold"
@@ -136,6 +146,9 @@
 						/>
 					</svg>
 				</button>
+			</div>
+			<div class="text-white text-1xl text-center m-3">
+			<h3>Check your wallet for a cool NFT</h3>
 			</div>
 		</div>
 	</div>
