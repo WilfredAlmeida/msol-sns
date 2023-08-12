@@ -1,8 +1,10 @@
 import { json } from "@sveltejs/kit";
-import { kv, createClient } from "@vercel/kv";
+import { createClient } from "@vercel/kv";
+import {PublicKey} from "@solana/web3.js";
 
-import { KV_REST_API_URL, KV_REST_API_TOKEN } from "$env/static/private"
+import { KV_REST_API_URL, KV_REST_API_TOKEN, UNDERDOG_KEY } from "$env/static/private"
 import { HttpResponseCode, MsolStatusCodes } from "../utils/constants.js";
+import { mintNft } from "../utils/nft.js";
 const snsDb = createClient({
     url: KV_REST_API_URL,
     token: KV_REST_API_TOKEN,
@@ -37,7 +39,36 @@ export async function POST({ request }) {
         );
     }
 
-    // TODO: add public key validation
+    try{
+    const parsedPublicKey = new PublicKey(publicKey)
+    }catch(e){
+        return json(
+            {
+                status: MsolStatusCodes.MSOL_INPUT_INVALID,
+                data: null,
+                error: [{ message: 'Invalid publicKey' }]
+            },
+            {
+                status: HttpResponseCode.BAD_REQUEST
+            }
+        );
+    }
+
+    const nftMintResponse = await mintNft(publicKey, UNDERDOG_KEY)
+    if(nftMintResponse !== 202){
+        console.log("NFT minting failed");
+        
+        return json(
+            {
+                status: MsolStatusCodes.MSOL_SOMETHING_WENT_WRONG,
+                data: null,
+                error: [{ message: 'Something went wrong. Please try again' }]
+            },
+            {
+                status: HttpResponseCode.INTERNAL_SERVER_ERROR
+            }
+        );
+    }
 
     const snsExists = await snsDb.exists(`${sns}`)
     if(snsExists && snsExists > 0){

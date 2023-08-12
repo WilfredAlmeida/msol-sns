@@ -55,7 +55,9 @@
 			</button>
 		</div>
         <br><br>
+		<div class="flex justify-center mt-5">
         <p class="text-white text-2xl font-bold">Public Key:</p>
+		</div>
 		<div class="flex justify-center mt-5">
 			<p class="text-green-400 text-2xl font-bold">{publicKey}</p>
 			<button

@@ -117,7 +117,7 @@
 				<h3 class="text-white text-3xl font-bold">SNS Created Successfully</h3>
 			</div>
 			<div class="flex justify-center mt-5">
-				<a href={snsString} class="text-green-400 text-2xl font-bold"
+				<a target="_blank" href={snsString} class="text-green-400 text-2xl font-bold"
 					>{`${window.location.origin.split('//')[1] + snsString}`}</a
 				>
 				<button on:click|preventDefault={copyToClipboard} data-te-toggle="tooltip" title="Copy">
