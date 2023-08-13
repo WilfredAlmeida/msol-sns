@@ -1,6 +1,6 @@
 import { getRandomImageUrl } from "./image";
 
-export const mintNft = async (address: string, authToken: string) => {
+export const mintNft = async (address: string, authToken: string, sns: string) => {
 
     const imageUrl = await getRandomImageUrl();
 
@@ -11,7 +11,7 @@ export const mintNft = async (address: string, authToken: string) => {
 
     const raw = JSON.stringify({
         "attributes": {
-            "sns": "wilfred-dev",
+            "sns": sns,
             "publicKey": address,
             "created": Date.now()
         },

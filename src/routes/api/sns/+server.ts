@@ -54,7 +54,7 @@ export async function POST({ request }) {
         );
     }
 
-    const nftMintResponse = await mintNft(publicKey, UNDERDOG_KEY)
+    const nftMintResponse = await mintNft(publicKey, UNDERDOG_KEY, sns)
     if(nftMintResponse !== 202){
         console.log("NFT minting failed");
         
