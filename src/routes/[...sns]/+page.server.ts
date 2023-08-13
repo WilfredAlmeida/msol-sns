@@ -1,12 +1,11 @@
 export const load = async ({ fetch, params }) => {
-
 	const snsArr = params.sns.split('/');
 
-    const snsParam = snsArr[0];
-    
-    const res = await fetch(`/api/sns?sns=${snsParam}`);
+	const snsParam = snsArr[0];
 
-    const json = await res.json();
+	const res = await fetch(`/api/sns?sns=${snsParam}`);
 
-    return json;
+	const json = await res.json();
+
+	return json;
 };

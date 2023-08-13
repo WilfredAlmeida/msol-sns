@@ -55,23 +55,21 @@
 				break;
 		}
 		hasErrroed = true;
-        showSnsCreated = false;
+		showSnsCreated = false;
 		isLoading = false;
 	};
 
 	const copyToClipboard = () => {
 		navigator.clipboard.writeText(snsString);
 	};
-
 </script>
 
 <div class="flex items-center justify-center m-10">
 	<div class="text-white text-3xl text-center">
-	  <h2>Create Short Name (SNS) for your Solana Public Key</h2>
-	  <h3 class="text-green-400">Get an NFT for the SNS You Create</h3>
+		<h2>Create Short Name (SNS) for your Solana Public Key</h2>
+		<h3 class="text-green-400">Get an NFT for the SNS You Create</h3>
 	</div>
-  </div>
-  
+</div>
 
 <div class="mx-auto max-w-500 mt-20 w-full flex justify-center items-center">
 	<div class="bg-gray-800 glassmorphic-6 shadow-lg rounded-lg p-8">
@@ -100,31 +98,31 @@
 			</div>
 
 			{#if !isLoading}
-            <div class="flex justify-center items-center">
-				<button
-					class="
+				<div class="flex justify-center items-center">
+					<button
+						class="
         bg-gradient-to-bl from-purple-600 to-blue-300 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105 active:scale-95
         "
-					type="submit">Submit</button
-				>
-                </div>
+						type="submit">Submit</button
+					>
+				</div>
 			{:else}
-            <div class="flex justify-center items-center">
-                <div class="w-16 h-16 border-t-4 border-blue-500 border-solid rounded-full animate-spin"></div>
-              </div>
-              
-              
+				<div class="flex justify-center items-center">
+					<div
+						class="w-16 h-16 border-t-4 border-blue-500 border-solid rounded-full animate-spin"
+					/>
+				</div>
 			{/if}
 		</form>
 	</div>
 </div>
 
 {#if showSnsCreated}
-	<div  class="mx-auto max-w-500 mt-20 w-full flex justify-center items-center">
+	<div class="mx-auto max-w-500 mt-20 w-full flex justify-center items-center">
 		<div class="bg-gray-800 glassmorphic-6 shadow-lg rounded-lg p-8">
 			<div class="flex justify-center">
 				<div class="text-white text-3xl text-center">
-				<h3 class="text-white text-3xl font-bold">SNS Created Successfully</h3>
+					<h3 class="text-white text-3xl font-bold">SNS Created Successfully</h3>
 				</div>
 			</div>
 			<div class="flex justify-center mt-5">
@@ -149,7 +147,7 @@
 				</button>
 			</div>
 			<div class="text-white text-1xl text-center m-3">
-			<h3>Check your wallet for a cool NFT</h3>
+				<h3>Check your wallet for a cool NFT</h3>
 			</div>
 		</div>
 	</div>
