@@ -62,6 +62,7 @@
 	const copyToClipboard = () => {
 		navigator.clipboard.writeText(snsString);
 	};
+
 </script>
 
 <div class="flex items-center justify-center m-10">
@@ -119,7 +120,7 @@
 </div>
 
 {#if showSnsCreated}
-	<div class="mx-auto max-w-500 mt-20 w-full flex justify-center items-center">
+	<div  class="mx-auto max-w-500 mt-20 w-full flex justify-center items-center">
 		<div class="bg-gray-800 glassmorphic-6 shadow-lg rounded-lg p-8">
 			<div class="flex justify-center">
 				<div class="text-white text-3xl text-center">
