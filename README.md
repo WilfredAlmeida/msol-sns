@@ -1,4 +1,5 @@
-<p align="center"><img src="https://github.com/WilfredAlmeida/msol-sns/assets/60785452/d4b934ed-5ff1-4b27-aba4-9c52aecf05ad"/></p>
+<p align="center"><img src="https://github.com/WilfredAlmeida/msol-sns/assets/60785452/67f8d0bc-ae22-4abe-9588-897fa42ec7da"/></p>
+
 
 # MSOL SNS
 
@@ -11,7 +12,8 @@ An SNS can be up to 20 characters long and can have letters, numbers, and hyphen
 MSOL uses [Vercel KV](https://vercel.com/docs/storage/vercel-kv) Redis database to store the SNS making it fast with average SNS lookup times of ~250ms.
 
 ## Demo
-![msol-demo](https://github.com/WilfredAlmeida/msol-sns/assets/60785452/24559d1d-a704-4498-aeb7-45504ec5dc6c)
+![msol-demo](https://github.com/WilfredAlmeida/msol-sns/assets/60785452/36f50a0e-d895-4ae0-b343-5f273e925fef)
+
 
 
 ## Public Key Lookup
