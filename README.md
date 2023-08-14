@@ -1,12 +1,18 @@
+<p align="center"><img src="https://github.com/WilfredAlmeida/msol-sns/assets/60785452/d4b934ed-5ff1-4b27-aba4-9c52aecf05ad"/></p>
+
 # MSOL SNS
 
 [MSOL](https://msol-sns.vercel.app/) is a Short Name Service (SNS) for Solana that gives you an easy-to-remember alias of your choice for your Solana Public Key.
 
-MSOL also gives you an NFT for the SNS you create as a proof that you own it.
+MSOL also gives you an NFT for the SNS you create as proof that you own it.
 
-An SNS can be upto 20 characters long and can have letters, numbers and hyphens. For eg. `foo-bar`
+An SNS can be up to 20 characters long and can have letters, numbers, and hyphens. For eg. `foo-bar`
+
+MSOL uses [Vercel KV](https://vercel.com/docs/storage/vercel-kv) Redis database to store the SNS making it fast with average SNS lookup times of ~250ms.
 
 ## Demo
+![msol-demo](https://github.com/WilfredAlmeida/msol-sns/assets/60785452/24559d1d-a704-4498-aeb7-45504ec5dc6c)
+
 
 ## Public Key Lookup
 There are 2 ways to lookup your key:
@@ -43,11 +49,11 @@ Sample Response
 
 
 ## Supporting MSOL
-MSOL aims to take away your hassle for remenbering your Solana Public Key.
+MSOL aims to take away the hassle of remembering your Solana Public Key.
 
-MSOL aims to always remain free for it's users.
+MSOL aims to always remain free for its users.
 
-Due to lack of financial resources, MSOL currently supports only Solana Devnet.
+Due to a lack of financial resources, MSOL currently supports only Solana Devnet.
 
 Please get in touch if you want to support MSOL.
 
