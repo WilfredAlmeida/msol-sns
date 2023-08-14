@@ -149,6 +149,9 @@
 			<div class="text-white text-1xl text-center m-3">
 				<h3>Check your wallet for a cool NFT</h3>
 			</div>
+			<div class="text-white text-1xl text-center m-3">
+				<h3>Share on <a href="https://twitter.com/intent/tweet?text=Guess what I just created%3F 💳 My personalized Solana SNS from %40MsolSns! 🚀%0A%0AMSOL lets us create a short and easy-to-remember short name for our public keys and also gives us an NFT for it!%0A%0A🌥%EF%B8%8F Create your SNS at https%3A%2F%2Fmsol-sns.vercel.app%0A%0ACC%3A %40WilfredAlmeida_" target="_blank" class="text-green-400">Twitter</a></h3>
+			</div>
 		</div>
 	</div>
 {/if}
